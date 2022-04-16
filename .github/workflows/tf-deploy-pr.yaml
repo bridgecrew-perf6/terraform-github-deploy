@@ -20,12 +20,12 @@ jobs:
       - name: Run Checkov action
         id: checkov
         uses: bridgecrewio/checkov-action@master
-      - name: Setup OPA
-        uses: open-policy-agent/setup-opa@v1
-        with:
-          version: latest
-      - name: Run OPA Tests 
-        run: opa test policy/*.rego -v
+      # - name: Setup OPA
+      #   uses: open-policy-agent/setup-opa@v1
+      #   with:
+      #     version: latest
+      # - name: Run OPA Tests 
+      #   run: opa test policy/*.rego -v
   infracost:
     runs-on: ubuntu-latest
     steps:
