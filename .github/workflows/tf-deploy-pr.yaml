@@ -83,6 +83,7 @@ jobs:
           aws-region: eu-west-1
           role-duration-seconds: 3600
       - name: terraform plan
+        id: terraform_plan
         uses: dflook/terraform-plan@v1
         with:
           path: ./
